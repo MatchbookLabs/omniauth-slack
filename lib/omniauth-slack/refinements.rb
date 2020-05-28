@@ -9,7 +9,7 @@ module OmniAuth
   module Slack
         
     module OAuth2Refinements
-      refine OAuth2::Response do
+      refine ::OAuth2::Response do
         # TODO: This might not be used any more.
         def to_auth_hash
           Module.const_get('::OmniAuth::Slack::AuthHash').new(parsed)
